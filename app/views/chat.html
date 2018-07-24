@@ -1,0 +1,139 @@
+<div class="content">
+ <!-- <div class="header-nav  openmodel-icon">
+    <a target="_blank" class="people-grid">
+      <div id="divUserImage" class="img-circle pull-right" height="40" style="color:#fff">
+          <span ng-click="openNewinfoModel()" class="glyphicon glyphicon-envelope newinfo-out" title='message'>
+            <span ng-if="newMsg > 0" class="newinfo">{{newMsg}}</span>
+          </span>
+      </div>
+    </a>
+  </div>-->
+  <div class="main-content-text">
+    <div class="user-blogs">
+
+      <div class="user-blogs-msg">
+        <div data-reactroot="" class="wc-app">
+          <div class="wc-chatview-panel">
+            <div class="wc-header">Message</div>
+            <!--chat-content-->
+            <div class="wc-message-pane">
+              <div class="wc-message-groups scrollbar" style="margin-bottom: 38px;bottom: 86px;">
+                <div id="divbot" class="wc-message-group-content">
+                  <div ng-repeat="cont in chat.content track by $index">
+                    <!--hr-->
+                    <div class="wc-message-wrapper list" ng-if="!cont.type">
+                      <span class="botImg">HR{{cont.name}}</span>
+                      <div class="wc-message wc-message-from-bot">
+                        <div class="wc-message-content">
+                          <div>
+                            <div class="format-markdown">
+                           		<p ng-if="!cont.mstype || cont.mstype=='text'" compile='cont.newText' ></p>
+                              	<img ng-right-click='rightFun()' ng-src="{{cont.Text}}" class="sendMessage imgicon" ng-if="cont.mstype=='image'" ng-click='bgImgFun(cont.Text,$event)'/>
+                              	<a ng-href="{{cont.Text}}" class="sendMessage" ng-if="cont.mstype=='file'"></a>
+                              	<span ng-if="cont.mstype=='file' || cont.mstype=='image'" class="showFileName">{{cont.fileName}}</span>
+                                <!--vidio start-->
+                                <div ng-if="cont.mstype=='vodio'">
+                                 		<div ng-click="showVideoBtn(cont,cont.Text)" class="vido-div">
+																				<img src="../images/newvideo.png" class="showvido" />
+																		</div>
+																
+																 </div>	
+																 <!--vidio end-->
+                            </div>
+                          </div>
+                        </div>
+                        <!--点赞-->
+                        <div ng-if="!cont.No_Comment" class="thumbs-up">
+                            <span ng-click="ThumbUp(cont.id)"><img width="30px" src="../images/hand_up.png" /></span>
+                            <span ng-click="ThumbDown(cont.id)"><img width="30px" src="../images/hand_down.png" /></span>
+                        </div>
+                      </div>
+                    </div>
+                    <!--people-start-->
+                    <div class="wc-message-wrapper list" ng-if="cont.type">
+                      <span class="top">ME</span>
+                      <div class="wc-message wc-message-from-me">
+                        <div class="wc-message-content">
+                          <div>
+                            <div class="format-markdown">
+                                <p ng-if="cont.type==1">{{cont.text}}</p>
+                              	<img  ng-src="{{cont.text}}" class="sendMessage imgicon" ng-if="cont.type=='image'" ng-click='bgImgFun(cont.text,$event)'/>
+                              	<a ng-href="{{cont.text}}" class="sendMessage" ng-if="cont.type=='file'"></a>
+                                	<span ng-if="cont.type=='file' || cont.type=='image'" class="showFileName">{{cont.fileName}}</span>
+                                <!--vidio start-->
+                                 <div ng-if="cont.type=='vodio'">
+                               			<div ng-click="showVideoBtn(cont,cont.text)" class="vido-div">
+																			<img src="../images/newvideo.png" class="showvido" />
+																	 </div>
+																</div>
+																<!--vidio end-->
+                              <div>
+                                  <span ng-if="cont.thumb_up_mark == '1'"><img width="25px" src="../images/hand_up_d.png" /></span>
+                                  <span ng-if="cont.thumb_up_mark == '2'"><img width="25px" src="../images/hand_down_d.png" /></span>
+                              </div>
+                            </div><!-- react-empty: 80 -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wc-message-from wc-message-from-bot"></div>
+                    </div>
+                  </div>
+                </div>
+                 <!--people-end-->
+              </div>
+              <div ng-if="chat.messagesFocus == true" >
+                	<span class="wc-header-new typeing">Typing a message...</span>
+              </div>
+              <!--chat-footer-->
+              <div class="wc-console">
+              	<div class="wc-toolbar">
+              	 <!-- <span class="emotion emoj-span"></span>-->
+              	  <!--<div id="saytext" ></div>
+                  <span class="emotion"></span> -->
+              	  <form  enctype="multipart/form-data" class="file-form">
+              	 		<a href="javascript:;" title="Image and File"  class="file-a" >
+              			<div>
+              				<input ng-disabled='showfile' type="file" id="filebtn" class="file-input" onchange="angular.element(this).scope().fileChanged(this)" />
+              				<label for="filebtn"></label>
+              			</div>
+              		</a>
+              	 </form>
+                </div>
+              	<!--<div ng-click="uploads()">upload</div>-->
+                <div class="wc-textbox">
+                	<form id="messageform">
+                		 <!--<div style="display: inline-block;">
+                		 	<img src="{{file_url}}"  />
+                		 </div>-->
+                    <input type="text" autocomplete="off" ng-model="chat.sendContent" name="text" id="serializeInfo" value="" placeholder="Please enter your message." maxlength="500" ng-keyup="keyupMessage($event)">
+                    <input type="text" name="eid" id="eid" style="display:none" />
+                    <input type="text" name="type" value="0" style="display:none" />
+                    <input type="text" name="uuid" id="uuid" style="display:none" />
+                    <button type="button" class="enterIcon" ng-click="sendMessage($event)">
+                      <img src="images/Group 137.png">
+                    </button>
+                  </form>
+                </div>
+              </div>
+							
+            </div>
+           
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!--图片模态框 -->
+<div class="motai" id="mo" ng-style='objimg'>
+    <!--<span class="closeimg" id="close" ng-click='colsespan()'>×</span>-->
+    <img class="motaiimg" id="moimg" ng-src='{{imgurl}}'>
+</div>
+<!--图片模态框 -->
+  <footer class="main-footer">
+    <p class="footerMessage">Accenture BPO Innovation Lab@2018, All rights reserved.</p>
+  </footer>
+</div>
+
+	

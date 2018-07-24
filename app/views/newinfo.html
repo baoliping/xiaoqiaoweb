@@ -1,0 +1,121 @@
+<div class="modal-header">
+        <button type="button" class="close" ng-click="ok()">&times;</button>
+        <h4 class="modal-title">Message information</h4>
+    </div>
+    <div class="modal-body relative">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="subject" class="col-sm-2 col-xs-4 control-label control-label-new">Subject</label>
+                <div class="col-sm-10 col-xs-8">
+                    <input type="text" ng-model="replay.subject" class="form-control" id="subject" placeholder="Subject" maxlength="100">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="content" class="col-sm-2 col-xs-4 control-label control-label-new">Content</label>
+                <div class="col-sm-10 col-xs-8">
+                    <textarea ng-model="replay.content" class="form-control" placeholder="Content" maxlength="100"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="send-btn-new">
+                    <button type="submit" ng-click="saveMessageInfo()" class="btn btn-primary btn-news-send">Send</button>
+                </div>
+            </div>
+        </form>
+        <div class="panel-body panel-max-h">
+            <ul class="reply_msg">
+                <!--<li>
+                    <div class="reply_msg_title clearfix">
+                        <div>Name</div>
+                        <div>Level</div>
+                        <div>VIP</div>
+                        <div>Subject</div>
+                        <div>Time</div>
+                    </div>
+                </li>-->
+                <li ng-repeat="msg in messageBoards">
+                    <div class="reply_msg_cont clearfix reply_msg_cont-new " style="position: relative;" >
+                    	<span ng-if="msg.childrenNoDealed && msg.childrenNoDealed > 0" class="not-reply-span">{{msg.childrenNoDealed}}</span>
+                        <div  class="reply_content_title name-more" title='{{msg.eid}}'>{{msg.eid}}</div>
+                        <!--<div style="display: inline-block;" class="reply_content_title">{{msg.level}}</div>
+                        <div style="display: inline-block;" class="reply_content_title">{{msg.is_vip== true ? 'VIP' : ''}}</div>-->
+                        <div   class="reply_content_title more-word reply_content_title-new">subject:&nbsp;&nbsp;{{msg.subject}}</div>
+                        <div style="display: inline-block; float: right;" class="text-right">
+                        	<!--<span ng-click="showMessage(msg)"  class="resh"></span>-->
+                        	<span ng-click="sendFun(msg.id)"  class="sendbtn">Reply</span>
+                        </div>
+                        <div>content:&nbsp;&nbsp;{{msg.text}}</div>
+                        <div>{{msg.date}}</div>
+                        <div ng-if="msg.hr_name" class="reply_content text-right " >
+                        <div class="reply_content_title">Reply information</div>
+                        <div class="reply_content_tt">
+                            <span>{{msg.hr_name}}</span>&nbsp;&nbsp;&nbsp;
+                            <span style="font-size: 12px;">{{msg.reply_date}}</span>
+                        </div>
+                        <div class="reply_content_cont">{{msg.reply_text}}</div>
+                    </div>
+                    </div>
+                   
+                    <div ng-repeat= "message in msg.muti_reply_messageList" class="reply_content newinfo-message" ng-if="msg.muti_reply_messageList.length!=0">
+                       <div class="reply_content_tt">
+                            <span>{{message.hr_name}}</span>&nbsp;&nbsp;&nbsp;
+                            <span style="font-size: 12px;">{{message.reply_date}}</span>
+                        </div>
+                        <div class="reply_content_cont">{{message.reply_text}}</div>
+                    </div>
+                    <div ng-repeat= "childrenmsg in msg.childrenList" class="reply_content text-left childrenmessaghe" ng-if="msg.childrenList.length!=0">
+                       <div class="reply_content_tt">
+                            <span>{{childrenmsg.subject}}</span>&nbsp;&nbsp;&nbsp;
+                             <span>{{childrenmsg.date}}</span>
+                           </div>
+                        <div class="reply_content_cont">{{childrenmsg.text}}</div>
+                        <div class="reply_content_tt  text-right">
+                            <span>{{childrenmsg.hr_name}}</span>&nbsp;&nbsp;&nbsp;
+                            <span style="font-size: 12px;">{{childrenmsg.reply_date}}</span>
+                            <div class="reply_content_cont">{{childrenmsg.reply_text}}</div>
+                        </div>
+                        <div ng-repeat=" nextchildrenmsg in childrenmsg.muti_reply_message_board.list"  class="reply_content_tt  text-right"  ng-if="childrenmsg.muti_reply_message_board.list.length!=0">
+	                        <span>{{nextchildrenmsg.hr_name}}</span>&nbsp;&nbsp;&nbsp;
+	                        <span style="font-size: 12px;">{{nextchildrenmsg.reply_date}}</span>
+	                        <div class="reply_content_cont" >{{nextchildrenmsg.reply_text}}</div>
+	                    </div>
+	                    
+                    </div>
+                   
+                    <div ng-if='msg.childrenCount>2 &&  msg.totalPage>pagecount' class="more-btn" ng-click="showMessage(msg)">
+	                    	<span>Load more</span>
+	                 </div>
+                   
+                </li>
+               
+            </ul>
+            <tm-pagination conf="paginationNewinfo"></tm-pagination>
+        </div>
+    </div>
+   
+    <!--end ngDialog createOne-->
+	<script type="text/ng-template" id="comment_one">
+	<div class="modal-header">
+		<h5 class="modal-title">Message information</h5>
+	</div>
+	<div class="modal-body">
+		<form class="form-horizontal">
+            <div class="form-group">
+                <label for="subject" class="col-sm-2 control-label">Subject</label>
+                <div class="col-sm-10">
+                    <input type="text" maxlength="100" ng-model="conmentObj.subject" class="form-control" id="subject" placeholder="Subject">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="content" class="col-sm-2 control-label">Content</label>
+                <div class="col-sm-10">
+                    <textarea ng-model="conmentObj.content" maxlength="50" class="form-control form-control-textre" placeholder="Content"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-12 text-center">
+				<input type="button" ng-click="formSubmit()" class="btn btn-success" value="sure" />
+				<input type="button" ng-click="closeDialog()" class="btn btn-default" value="cancel" />
+		   </div>
+        </form>
+	</div>
+</script>

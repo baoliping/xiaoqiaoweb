@@ -1,0 +1,34 @@
+<div class="register-content login-img">
+     <div>
+			<div class="header-wrap">
+				<div class="header-left">
+					<p class="page-title pt">
+						<a class="page-title sign-up-a" href="#!/login" target="_self">Sign in</a>
+					</p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="register-form">
+			<form ng-submit="registerFun()">
+				<div class="register-type">
+					<i class="glyphicon glyphicon-user"></i> <input type="text"  placeholder="eid" ng-model="account.eid" ng-blur="eidFun"/>
+				</div>
+				<div class="register-type">
+					<i class="glyphicon glyphicon-envelope"></i> <input type="text"  placeholder="email" ng-model="account.email"/>
+			    </div>
+				<div class="register-type">
+					<i class="glyphicon glyphicon-phone-alt"></i><input type="text"   placeholder="telephone" ng-model="account.telephone"/>
+				</div>
+				<div class="register-type">
+					<i class="glyphicon glyphicon-grain"></i><input type="text"  placeholder="function" ng-model="account.function"/>
+				</div>
+				<div class="register-type">
+					<button type="submit" class="register-submit">Sign up now</button>
+				</div>
+			</form>
+		</div>
+  <footer class="main-footer main-footer-new">
+    <p class="footerMessage">Accenture BPO Innovation Lab@2018, All rights reserved.</p>
+  </footer>
+</div>

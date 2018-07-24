@@ -1,0 +1,149 @@
+{
+  "GU": [
+    {
+      "id":"list1",
+      "name":"Leave",
+      "list": [
+      {
+        "id": "list1",
+        "name": "Sick Leave",
+        "list": [
+          { "name": "How do I submit leave application?" },
+          { "name": "What's my sick leave break down?" },
+          { "name": "How many days on my leave balance?" },
+          { "name": "How can I do medical certificate submission?" },
+          { "name": "What's the medical certificate requirement?" },
+          { "name": "What's the effect about sick leave vs salary?" }
+        ]
+      },
+                {
+                    "id":"list2",
+                    "name":"Maternity Leave",
+                    "list":[
+                            {"name":"How do I submit maternity leave application?"},
+                            {"name":"How many days on maternity leave entitlement?"},
+                            {"name":"How do I do maternity leave time report submission？"},
+                            {"name":"What's maternity leave allowance eligibility?"},
+                            {"name":"How do I submit maternity leave allowance application?"},
+                            {"name":"I want to do maternity leave duration adjustment."}
+                        ]
+                },
+                {
+                    "id":"list3",
+                    "name":"Paternity Leave",
+                    "list":[
+                            {"name":"How do I submit paternity leave application?"},
+                            {"name":"How many days on paternity leave entitlement?"},
+                            {"name":"What's my paternity leave WBS code?"},
+                            {"name":"What's my paternity leave allowance eligibility?"},
+                            {"name":"How do I submit paternity leave allowance application?"}
+                        ]
+                },
+                {
+                    "id":"list4",
+                    "name":"Nursing Leave",
+                    "list":[
+                            {"name":"How do I submit nursing leave application?"},
+                            {"name":"How many days on nursing leave entitlement?"},
+                            {"name":"Can I make nursing leave accrue or carry over?"},
+                            {"name":"What's my nursing leave WBS code?"}
+                        ]
+                },
+                {
+                    "id":"list5",
+                    "name":"Unpaid Leave(more than 1 month)",
+                    "list":[
+                            {"name":"How do I submit unpaid leave application?"},
+                            {"name":"How is my unpaid leave eligibility?"},
+                            {"name":"What's can be the unpaid leave reason?"},
+                            {"name":"What's my maximum unpaid leave length?"},
+                            {"name":"What's my unpaid leave benefits?"},
+                            {"name":"Will my position retain during unpaid leave?"}
+                        ]
+                },
+                {
+                    "id":"list6",
+                    "name":"Marriage Leave",
+                    "list":[
+                            {"name":"How do I submit marriage leave application?"},
+                            {"name":"How is my marriage leave eligibility?"},
+                            {"name":"How many days on marriage leave entitlement?"},
+                            {"name":"What's my marriage leave WBS code?"},
+                            {"name":"What's marriage leave allowance eligibility?"},
+                            {"name":"How do I submit marriage leave allowance application?"}
+                        ]
+                },
+                {
+                    "id":"list7",
+                    "name":"Miscarriage Leave",
+                    "list":[
+                            {"name":"How do I submit miscarriage leave application?"},
+                            {"name":"How many days on miscarriage leave entitlement?"}
+                        ]
+                },
+                {
+                    "id":"list8",
+                    "name":"Antenatal Examination Leave",
+                    "list":[
+                            {"name":"How do I submit antenatal examination leave application?"},
+                            {"name":"How many days on antenatal examination leave entitlement?"}
+                        ]
+                },
+                {
+                    "id":"list9",
+                    "name":"Compassionate Leave",
+                    "list":[
+                            {"name":"How do I submit compassionate leave application?"},
+                            {"name":"How is my compassionate leave eligibility?"},
+                            {"name":"What's compassionate leave allowance?"},
+                            {"name":"How to claim compassionate leave allowance?"}
+                        ]
+                },
+                {
+                    "id":"list10",
+                    "name":"Annual Leave",
+                    "list":[
+                            {"name":"How do I submit annual leave application?"},
+                            {"name":"What's my annual leave break down?"},
+                            {"name":"How many days on annual leave balance till now?"},
+                            {"name":"How many days on annual negative leave balance?"},
+                            {"name":"What's the policy on annual beave balance upon termination?"},
+                            {"name":"What's the rate on annual vacation cash out caculation upon termination?"},
+                            {"name":"What's the policy of annual Leave Accrue?"},
+                            {"name":"How many days on annual leave carry over?"},
+                            {"name":"How many days on annual leave Take During Probation?"},
+                            {"name":"What's the policy on Pro-Rated Leave Accrue?"}
+                        ]
+                }
+        ]
+    },
+    {
+      "id":"list2",
+      "name":"WBS",
+      "list": [
+            {"name":"Annual Leave"},
+            {"name":"Unpaid Leave of Absence"},
+            {"name":"Sick Leave"},
+            {"name":"Compassionate Leave"},
+            {"name":"Maternity leave"},
+            {"name":"Paternity leave"},
+            {"name":"Career Counseling"},
+            {"name":"Annual Process"},
+            {"name":"New Hire Orientation"},
+            {"name":"Unassigned Time"},
+            {"name":"Flex Leave"},
+            {"name":"Marriage Leave"}
+        ]
+    },
+    {
+      "id":"list3",
+      "name":"Verification Letter",
+      "list": [
+                {"name":"Employment Letter"},
+                {"name":"Exit Reference Letter"},
+                {"name":"Business License"}
+        ]
+    }
+
+  ]
+}

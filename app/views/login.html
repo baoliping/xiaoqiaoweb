@@ -1,0 +1,77 @@
+<div class="register-content login-img">
+	<!-- <div class="forget-common-header" style="background-color: #000000;color: #fff">-->
+		<!--<div>
+			<div class="header-wrap">
+				<div class="header-left">
+					<p class="page-title pt">
+						<a class="page-title sign-up-a" href="#!/register" target="_self">Sign up</a>
+					</p>
+				</div>
+				
+			</div>
+		</div>-->
+		<div class="register-form" style="border: 1px solid #ccc;" ng-if='changeLoginShow==1'>
+			<form ng-submit="loginFun()">
+			<div class="login-type">
+				<i class="glyphicon glyphicon-user"></i> <input type="text"  placeholder="eid" ng-model="user.eid"/>
+			</div>
+			<div class="login-type">
+				<i class="glyphicon glyphicon-lock"></i> <input type="password"  placeholder="password" ng-model="user.password" />
+		    </div>
+			
+			<div class="login-type">
+				<button type="submit" class="login-submit">Sign In</button>
+			</div>
+			</form>
+			<div class="login-type">
+				<div  class="login-forget new-forget">
+					 <a  class="login-link"  ng-click='changeLogin1()'>Sign Up</a>
+			         <span class="dotted">|</span>
+					 <a href="#!/forgetPassword" class="login-link" id="forgetpwd" target="_self">Forgot password?</a>
+			         <span class="dotted">|</span>
+			         <a class="login-link"  ng-click='changeLogin3()'>accenture</a>
+				</div>
+				
+			</div>
+		</div>
+		<!---->
+		<div class="register-form" ng-if='changeLoginShow==2'>
+			<form ng-submit="registerFun()">
+				<div class="register-type">
+					<i class="glyphicon glyphicon-user"></i> <input type="text"  placeholder="eid" ng-model="account.eid" ng-blur="eidFun"/>
+				</div>
+				<div class="register-type">
+					<i class="glyphicon glyphicon-envelope"></i> <input type="text"  placeholder="email" ng-model="account.email"/>
+			    </div>
+				<div class="register-type">
+					<i class="glyphicon glyphicon-phone-alt"></i><input type="text" class="input-icon"  placeholder="telephone" ng-model="account.telephone"/>
+				</div>
+				<div class="register-type">
+					<i class="glyphicon glyphicon-grain"></i><input type="text" class="input-icon" placeholder="function" ng-model="account.function"/>
+				</div>
+				<div class="register-type">
+					<button type="submit" class="register-submit">Sign up now</button>
+				</div>
+				<div class="login-type regeist-sign">
+					<div  class="login-forget new-forget-up">
+						 <a href="#!/forgetPassword" class="login-link" id="forgetpwd" target="_self">Forgot password?</a>
+				         <span class="dotted">|</span>
+				         <a  class="login-link"  ng-click='changeLogin2()'>Sign in</a>
+					</div>
+				
+				</div>
+			</form>
+		</div>
+		<!---->
+		<div class="register-form" ng-if='changeLoginShow==0' style="background-color: #d5d0d0;">
+			<div class="authentication-log">
+				<img ng-src="../images/authentication.png"/>
+			</div>
+			<div class="acoount-login" ng-click='changeAcoount()' style="color: #000000;">
+				Account password login
+			</div>
+		</div>
+  <footer class="main-footer main-footer-new">
+    <p class="footerMessage">Accenture BPO Innovation Lab@2018, All rights reserved.</p>
+  </footer>
+</div>

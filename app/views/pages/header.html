@@ -1,0 +1,68 @@
+<div class="content content-bg">
+	  <div class="header-nav header-top user-nav" style="height: 40px; line-height: 40px;background-color: inherit;000">
+	  	<p class="current-time">Current Time: {{nowTime|date:'yyyy-MM-dd hh:mm:ss'}}</p>
+	  	<div class="dropdown-caret-div">
+	  		 <div class="account-header">
+	  	 		 <span ng-click="useropenFun()">Account： {{userInfo.eid}}</span>
+	  	   </div>
+	  	 	 <div class='setting-btn'  ng-click="menuFun()">
+	  	 	 	<i class="glyphicon glyphicon-cog setting-btn"></i>
+	  	 	 	<!--<span class="dropdown-caret" ></span>-->
+	  	 	 </div>
+	  	 </div>
+	  	  <div id="divUserImage" class="img-circle pull-right" height="40" style="color:#fff">
+          <span ng-click="openNewinfoModel()" class="glyphicon glyphicon-envelope newinfo-out" title='message'>
+            <span ng-if="newMsg > 0" class="newinfo">{{newMsg}}</span>
+          </span>
+      </div>
+	  	 <ul class="dropdown-menu dropdown-menu-sw dropdown-menu-news" ng-show="isShow" id='test'>
+	  	 	<li ng-click="modifyFun()">Change the password</li>
+	  	  <li ng-click="logoutFun()">exit</li>
+	  	 </ul>
+	  </div>
+</div>
+<script type="text/ng-template" id="modify_one">
+	<div class="modal-header">
+		<h5 class="modal-title">Change the password</h5>
+	</div>
+	<div class="modal-body" id="add-advertisements" >
+		<form class="form-horizontal mycheckbox-inline ">
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label class="control-label col-lg-5">new password</label>
+						<div class=" col-lg-7">
+							<input type="password" ng-model="newsAdd.newpassword" class="form-control" required placeholder="Please enter your password" />
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label class="control-label col-lg-5">Confirm password</label>
+						<div class=" col-lg-7">
+							<input type="password" ng-model="newsAdd.password" class="form-control" required placeholder="Please enter your password" />
+						</div>
+					</div>
+				</div>
+			   <div class="col-lg-12 text-center">
+						<input type="button" ng-click="formSubmit()" class="btn btn-success" value="sure" />
+						<input type="button" ng-click="closeDialog()" class="btn btn-default" value="cancel" />
+				</div>
+		</form>
+	</div>
+</script>
+<!--end ngDialog createOne-->
+	<script type="text/ng-template" id="userinfo_one">
+	<div class="modal-header">
+		<h5 class="modal-title">Basic user information</h5>
+	</div>
+	<div class="modal-body">
+		<form class="form-horizontal mycheckbox-inline ">
+				<ul>
+					<li>telephone:{{userInfo.telephone}}</li>
+					<li>function:{{userInfo.function}}</li>
+					<li>email:{{userInfo.email}}</li>
+				</ul>
+			  
+		</form>
+	</div>
+</script>

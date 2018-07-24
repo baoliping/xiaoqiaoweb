@@ -1,0 +1,242 @@
+{"GU":[
+			{ 
+				"id": "list1",
+				"name":"CN",
+				"list":[
+							{
+							"id":"list1",
+							"name":"假期",
+							"list": [
+									{
+										"id":"list1",
+										"name":"申请",
+										"list":[
+												{"name":"年假怎么申请"},
+												{"name":"产假怎么申请"},
+												{"name":"产检假怎么申请"},
+												{"name":"流产假怎么申请"},
+												{"name":"陪产假怎么申请"},
+												{"name":"丧假怎么申请"},
+												{"name":"哺乳假怎么申请"},
+												{"name":"婚假怎么申请"},
+												{"name":"无薪假怎么申请"},
+												{"name":"病假怎么申请"}
+											]
+										},
+										{
+										"id":"list2",
+										"name":"政策",
+										"list":[
+												{"name":"年假政策是什么"},
+												{"name":"产假政策是什么"},
+												{"name":"产检假政策是什么"},
+												{"name":"流产假政策是什么"},
+												{"name":"陪产假政策是什么"},
+												{"name":"丧假政策是什么"},
+												{"name":"哺乳假政策是什么"},
+												{"name":"婚假政策是什么"},
+												{"name":"无薪假政策是什么"},
+												{"name":"病假政策是什么"},
+												{"name":"其他假期政策是什么"}
+											]
+										},
+										{
+										"id":"list3",
+										"name":"其他",
+										"list":[
+												{"name":"年假该怎么计算"},
+												{"name":"年假还剩多少天"},
+												{"name":"病假还剩多少天"},
+												{"name":"病假需要医疗证明吗"},
+												{"name":"无薪事假期间职位会有变动吗"}
+											]
+										}
+							]
+							},
+							{
+							"id":"list2",
+							"name":"WBS",
+							"list": [
+								{"name":"年假WBS是什么"},
+												{"name":"产假WBS是什么"},
+												{"name":"产检假WBS是什么"},
+												{"name":"流产假WBS是什么"},
+												{"name":"陪产假WBS是什么"},
+												{"name":"丧假WBS是什么"},
+												{"name":"哺乳假WBS是什么"},
+												{"name":"婚假WBS是什么"},
+												{"name":"无薪假WBS是什么"},
+												{"name":"病假WBS是什么"},
+												{"name":"On bench WBS是什么"},
+												{"name":"职业咨询WBS是什么"},
+												{"name":"调休WBS是什么"},
+												{"name":"入职培训WBS是什么"},
+												{"name":"项目WBS是什么"}
+							]
+							},
+							{
+							"id":"list3",
+							"name":"工资",
+							"list": [
+									{"name":"请病假时的工资怎么算"},
+									{"name":"工资卡账户变动"},
+									{"name":"工资明细在哪里可以查询到"},
+									{"name":"怎么查奖金"}
+							]
+							},
+							{
+							"id":"list4",
+							"name":"离职",
+							"list": [
+								{"name":"离职后我的医保和社保需要怎么处理"},
+								{"name":"离职需要提前多久通知公司"},
+								{"name":"离职时未休完的年假如何处理"},
+								{"name":"离职流程要怎么办理"}
+							]
+							},
+							{
+							"id":"list5",
+							"name":"福利",
+							"list": [
+								{"name":"体检需要提前多久预约"},
+								{"name":"内部推荐员工的奖金什么时候可以拿到"},
+								{"name":"公司是按什么比例缴纳社保和公积金的"},
+								{"name":"怎么申请领取办公设备"},
+								{"name":"我想申请个人名片"},
+								{"name":"怎么申请领取电影票"},
+								{"name":"员工如何购买公司的股票"}
+							]
+							},
+							{
+							"id":"list6",
+							"name":"其他",
+							"list": [
+								{"name":"公司联系方式是什么"},
+								{"name":"我想咨询一下出差的政策"},
+								{"name":"退休的政策是什么"}
+							]
+							}
+					]
+			},
+			{ 
+				"id": "list2",
+				"name":"EN",
+				"list":[
+							{
+							"id":"list1",
+							"name":"Leave",
+							"list": [
+									{
+										"id":"list1",
+										"name":"apply",
+										"list":[
+												{"name":"How to apply annual leave"},
+												{"name":"How to apply maternity leave"},
+												{"name":"How to apply antenatal examination leave"},
+												{"name":"How to apply miscarriage leave"},
+												{"name":"How to apply nursing leave"},
+												{"name":"How to apply sick leave"},
+												{"name":"How to apply compassionate leave"},
+												{"name":"How to apply flex leave"},
+												{"name":"How to apply marriage leave"},
+												{"name":"How to apply unpaid leave"},
+												{"name":"How to apply paternity leave"}
+											]
+										},
+										{
+										"id":"list2",
+										"name":"policy",
+										"list":[
+												{"name":"What is the policy of annual leave"},
+												{"name":"What is the policy of maternity leave"},
+												{"name":"What is the policy of antenatal examination leave"},
+												{"name":"What is the policy of miscarriage leave"},
+												{"name":"What is the policy of sick leave"},
+												{"name":"What is the policy of compassionate leave"},
+												{"name":"What is the policy of flex leave"},
+												{"name":"What is the policy of marriage leave"},
+												{"name":"What is the policy of unpaid leave"},
+												{"name":"What is the policy of paternity leave"},
+												{"name":"What is the policy of nursing leave"}
+											]
+										},
+										{
+										"id":"list3",
+										"name":"other",
+										"list":[
+												{"name":"How to accumulate annual leave"},
+												{"name":"annual leave balance"},
+												{"name":"sick leave balance"},
+												{"name":"Do I need to submit medical certification when i ask for sick leave"},
+												{"name":"If my position will be kept during my unpaid leave"}
+											]
+										}
+							]
+							},
+							{
+							"id":"list2",
+							"name":"WBS",
+							"list":[ 
+								{"name":"What is the WBS code of annual leave"},
+								{"name":"What is the WBS code of maternity leave"},
+								{"name":"What is the WBS code of antenatal examination leave"},
+								{"name":"What is the WBS code of miscarriage leave"},
+								{"name":"What is the WBS code of sick leave"},
+								{"name":"What is the WBS code of compassionate leave"},
+								{"name":"What is the WBS code of flex leave"},
+								{"name":"What is the WBS code of marriage leave"},
+								{"name":"What is the WBS code of unpaid leave"},
+								{"name":"What is the WBS code of paternity leave"},
+								{"name":"What is the WBS code of nursing leave"},
+								{"name":"What is the WBS code of on bench"},
+								{"name":"What is the WBS code of career counseling"},
+								{"name":"What is the WBS code of project"},
+								{"name":"What is the WBS code of NJO"}
+							]
+							},
+							{
+							"id":"list3",
+							"name":"Salary",
+							"list": [
+									{"name":"What's the salary rate for sick leave"},
+									{"name":"If i can change my pay card number by myself"},
+									{"name":"Where can i find my detailed salary information"},
+									{"name":"Where can i get my any bonus information"}
+							]
+							},
+							{
+							"id":"list4",
+							"name":"Exit",
+							"list": [
+								{"name":"How can i transfer my social insurance after exit"},
+								{"name":"How many days should i apply for exit in advance"},
+								{"name":"What about the vacation before exit"},
+								{"name":"May i know steps to exit"}
+							]
+							},
+							{
+							"id":"list5",
+							"name":"Benefit",
+							"list": [
+								{"name":"When can i take physical examination"},
+								{"name":"How to recommend resource"},
+								{"name":"How about our commercial insurance"},
+								{"name":"How to apply for office device equipping"},
+								{"name":"How to apply for Business Card Print"},
+								{"name":"Where to apply Movie Ticket"},
+								{"name":"How to  buy company stock"}
+							]
+							},
+							{
+							"id":"list6",
+							"name":"Other",
+							"list": [
+								{"name":"Who can i contact to if i'm a former"},
+								{"name":"What about the policy of business travel"},
+								{"name":"What's the policy of retirement"}
+							]
+							}
+					]
+			}
+	]
+}
